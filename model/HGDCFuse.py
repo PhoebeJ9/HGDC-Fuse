@@ -195,7 +195,7 @@ class MyGNN(nn.Module):
         z = self.post_z_ln(z)
         return {'z': z, 'msg_ehr_ehr': msg_ehr_ehr, 'msg_cxr_ehr': msg_cxr_ehr}
 
-class HeteroGraphMultiModalModelSimpleMulti(nn.Module):
+class HeteroGraphMultiModalModel(nn.Module):
     def __init__(self, hidden_size, num_classes, ehr_dropout, ehr_n_layers, ehr_n_head, t, adj_file):
         super().__init__()
         self.num_classes = num_classes
